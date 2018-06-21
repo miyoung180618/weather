@@ -13,8 +13,57 @@ html{
 }
 body{
   font-size: 1.6rem;
+  background: #83BEAE;
+  font-family:"HyundaiRegular";
 }
 h1, h1, h3, h4, h5, h6{
-  font-size: 1em;
+  font-size: 1.6rem;
   font-weight: normal;
 }
+/* 섹션 1 콘텐츠 레이아웃 */
+.section1{
+  background:blue;
+  display: grid;
+  grid-template-columns: repeat(12,65px);
+  grid-template-rows: auto auto;
+  grid-column-gap: 20px;
+  position: relative;
+  justify-content: center;
+}
+/* .section1::after {
+  content:"";
+  background: repeating-linear-gradient(to right, hsla(0,50%,50%,.5),hsla(0,50%,50%,.5) 65px, transparent 65px, transparent 85px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 100vh;
+} */
+  /* 로고 */
+ .logo{
+   font-size: 8rem;
+   color:#fff;
+   font-family:"HyundaiExtraBold";
+   grid-column: 4/ span 6;
+   grid-row: 1/2;
+  }
+  /* 웨더 앱 소개 */
+  .description {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.5;
+    grid-column: 7/ span 6;
+    grid-row:2/3;
+  } 
+  .description span{
+    display: block;
+  }
+  /* 앱 소개 이미지 */
+  .image-wrapper {
+    grid-column: 1/ span 6;
+    grid-row: 2/3;
+  }
+  .image-wrapper img{ 
+    max-width: 100%;
+    max-height: auto;
+  }
